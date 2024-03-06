@@ -25,7 +25,7 @@
     <x:Null />
   </VisualBasic.Settings>
   <sap2010:Annotation.AnnotationText>UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9</sap2010:Annotation.AnnotationText>
-  <sap:VirtualizedContainerService.HintSize>1208,818</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1208,823</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -182,7 +182,7 @@
       <AssemblyReference>UiPath.DataService.Definition</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="416,707" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="416,758" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="umau:JobInformation" Name="outJobData" />
       <Variable x:TypeArguments="snm:MailMessage" Name="EmailReceived" />
@@ -198,6 +198,6 @@
     </sap:WorkflowViewStateService.ViewState>
     <umamt:NewEmailReceived ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" Filter="{x:Null}" AuthScopesInvalid="False" BodyAsHtml="False" BrowserFolderId="AQMkADkzOGVhM2EzLTRhN2QtNDdiOS1iZGY2LTQzZTk1YzJiMmIzZgAuAAAD7m4bsnHgU0KEOu6N6myQAAEAcYxz33Myn0mdhIYW9_x0dwAAAgEMAAAA" BrowserFolderName="Inbox" ConnectionId="0f311275-0a39-4d79-a759-a85226cc3cb1" DisplayName="Email Received" FilterExpression="(parentFolderId=='AQMkADkzOGVhM2EzLTRhN2QtNDdiOS1iZGY2LTQzZTk1YzJiMmIzZgAuAAAD7m4bsnHgU0KEOu6N6myQAAEAcYxz33Myn0mdhIYW9_x0dwAAAgEMAAAA')" sap:VirtualizedContainerService.HintSize="354,263" sap2010:WorkflowViewState.IdRef="NewEmailReceived_1" IncludeAttachments="False" JobData="[outJobData]" MarkAsRead="False" Result="[receivedEmail]" UiPathEvent="[UiPathEvent]" UiPathEventConnector="[UiPathEventConnector]" UiPathEventObjectId="[UiPathEventObjectId]" UiPathEventObjectType="[UiPathEventObjectType]" UseConnectionService="True" WithAttachmentsOnly="False" />
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,181" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Main Process Starting&quot;]" />
-    <e:NewActivity GetNewestEmail_1_BrowserFolder="{x:Null}" GetNewestEmail_1_BrowserFolderId="AQMkADkzOGVhM2EzLTRhN2QtNDdiOS1iZGY2LTQzZTk1YzJiMmIzZgAuAAAD7m4bsnHgU0KEOu6N6myQAAEAcYxz33Myn0mdhIYW9_x0dwAAAgEIAAAA" GetNewestEmail_1_Connection0="0085e767-3a65-43de-aff0-1de9a7f10ed4" sap:VirtualizedContainerService.HintSize="354,175" sap2010:WorkflowViewState.IdRef="NewActivity_1" />
+    <e:NewActivity EmailDetails="{x:Null}" GetNewestEmail_1_BrowserFolder="{x:Null}" GetNewestEmail_1_BrowserFolderId="AQMkADkzOGVhM2EzLTRhN2QtNDdiOS1iZGY2LTQzZTk1YzJiMmIzZgAuAAAD7m4bsnHgU0KEOu6N6myQAAEAcYxz33Myn0mdhIYW9_x0dwAAAgEIAAAA" GetNewestEmail_1_Connection0="0085e767-3a65-43de-aff0-1de9a7f10ed4" sap:VirtualizedContainerService.HintSize="354,226" sap2010:WorkflowViewState.IdRef="NewActivity_1" />
   </Sequence>
 </Activity>
