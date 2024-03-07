@@ -25,7 +25,7 @@
     <x:Null />
   </VisualBasic.Settings>
   <sap2010:Annotation.AnnotationText>UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9</sap2010:Annotation.AnnotationText>
-  <sap:VirtualizedContainerService.HintSize>732,1567.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1208,1360</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -188,21 +188,21 @@
       <AssemblyReference>DataService.Test</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="544,1502.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="541,1445" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Subject" />
       <Variable x:TypeArguments="x:String" Name="EmailID" />
       <Variable x:TypeArguments="x:String" Name="EmailFolder" />
-      <Variable x:TypeArguments="umm:Office365Message" Name="RecievedEmail" />
-      <Variable x:TypeArguments="scg:IEnumerable(t:EmailDetails)" Name="AllEmailRecords" />
+      <Variable x:TypeArguments="umm:Office365Message" Name="ReceivedEmail" />
+      <Variable x:TypeArguments="scg:IList(t:EmailDetails)" Name="QueriedRecords" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <umamt:NewEmailReceived ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" Filter="{x:Null}" JobData="{x:Null}" AuthScopesInvalid="False" BodyAsHtml="False" BrowserFolderId="AAMkADlmYWUwNmFjLWU5YWUtNGY2My04Njg5LWNjMmU3Y2IwMzNhMAAuAAAAAABi0lQMk7JtRJ7CNcLhqRlGAQB9dCvptslzT5BaQMLAVYvgAAAAAAEMAAA=" BrowserFolderName="Inbox" ConnectionId="d55a5ed4-b7ae-4beb-b24d-23192bfdab90" DisplayName="Email Received" FilterExpression="(parentFolderId=='AAMkADlmYWUwNmFjLWU5YWUtNGY2My04Njg5LWNjMmU3Y2IwMzNhMAAuAAAAAABi0lQMk7JtRJ7CNcLhqRlGAQB9dCvptslzT5BaQMLAVYvgAAAAAAEMAAA=')" sap:VirtualizedContainerService.HintSize="481.6,265.6" sap2010:WorkflowViewState.IdRef="NewEmailReceived_1" IncludeAttachments="False" MarkAsRead="False" Result="[RecievedEmail]" UiPathEvent="[UiPathEvent]" UiPathEventConnector="[UiPathEventConnector]" UiPathEventObjectId="[UiPathEventObjectId]" UiPathEventObjectType="[UiPathEventObjectType]" UseConnectionService="True" WithAttachmentsOnly="False" />
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="481.6,220" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <umamt:NewEmailReceived ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" Filter="{x:Null}" JobData="{x:Null}" AuthScopesInvalid="False" BodyAsHtml="False" BrowserFolderId="AAMkADlmYWUwNmFjLWU5YWUtNGY2My04Njg5LWNjMmU3Y2IwMzNhMAAuAAAAAABi0lQMk7JtRJ7CNcLhqRlGAQB9dCvptslzT5BaQMLAVYvgAAAAAAEMAAA=" BrowserFolderName="Inbox" ConnectionId="0f311275-0a39-4d79-a759-a85226cc3cb1" DisplayName="Email Received" FilterExpression="(parentFolderId=='AAMkADlmYWUwNmFjLWU5YWUtNGY2My04Njg5LWNjMmU3Y2IwMzNhMAAuAAAAAABi0lQMk7JtRJ7CNcLhqRlGAQB9dCvptslzT5BaQMLAVYvgAAAAAAEMAAA=')" sap:VirtualizedContainerService.HintSize="479,263" sap2010:WorkflowViewState.IdRef="NewEmailReceived_1" IncludeAttachments="False" MarkAsRead="False" Result="[ReceivedEmail]" UiPathEvent="[UiPathEvent]" UiPathEventConnector="[UiPathEventConnector]" UiPathEventObjectId="[UiPathEventObjectId]" UiPathEventObjectType="[UiPathEventObjectType]" UseConnectionService="True" WithAttachmentsOnly="False" />
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="479,218" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -210,7 +210,7 @@
               <OutArgument x:TypeArguments="x:String">[Subject]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">[RecievedEmail.Subject]</InArgument>
+              <InArgument x:TypeArguments="x:String">[ReceivedEmail.Subject]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
@@ -218,7 +218,7 @@
               <OutArgument x:TypeArguments="x:String">[EmailID]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">[RecievedEmail.MessageId]</InArgument>
+              <InArgument x:TypeArguments="x:String">[ReceivedEmail.MessageId]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
@@ -226,21 +226,22 @@
               <OutArgument x:TypeArguments="x:String">[EmailFolder]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">[RecievedEmail.ParentFolderId]</InArgument>
+              <InArgument x:TypeArguments="x:String">[ReceivedEmail.ParentFolderId]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="481.6,182.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[Subject + &quot; &quot; + EmailFolder + &quot; &quot; + EmailID]" />
-    <uda:QueryEntityRecords x:TypeArguments="t:EmailDetails" TotalRecords="{x:Null}" ContinueOnError="False" DisplayName="Query Entity Records" EntityId="f5f4099f-a2d4-ee11-85f9-000d3adf1489" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="481.6,180.8" sap2010:WorkflowViewState.IdRef="QueryEntityRecords`1_1" OutputRecords="[AllEmailRecords]" QueriedEntityId="f5f4099f-a2d4-ee11-85f9-000d3adf1489" Skip="0" SortAscending="True" SortByField="Id" TimeoutInMs="30000" Top="100">
+    <ui:LogMessage DisplayName="Log Email Details" sap:VirtualizedContainerService.HintSize="479,181" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[Subject + &quot; &quot; + EmailFolder + &quot; &quot; + EmailID]" />
+    <uda:QueryEntityRecords x:TypeArguments="t:EmailDetails" TotalRecords="{x:Null}" ContinueOnError="False" DisplayName="Query EmailDetails Records" EntityId="f5f4099f-a2d4-ee11-85f9-000d3adf1489" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="479,180" sap2010:WorkflowViewState.IdRef="QueryEntityRecords`1_1" OutputRecords="[QueriedRecords]" QueriedEntityId="f5f4099f-a2d4-ee11-85f9-000d3adf1489" Skip="0" SortAscending="True" SortByField="Id" TimeoutInMs="30000" Top="100">
       <uda:QueryEntityRecords.FilterArguments>
         <uda:FilterArgument FilterActivityType="{x:Null}">
           <uda:FilterArgument.Filter>
             <uda:GroupFilter Index="0" Operator="AND">
               <uda:GroupFilter.Filters>
                 <scg:List x:TypeArguments="uda:SimpleFilter" Capacity="4">
-                  <uda:SimpleFilter ExpressionValue="{x:Null}" FieldName="Subject" FieldType="UiPath.DataService.Core.Models.EntityField" Operator="not empty" ValueIndex="0" />
+                  <uda:SimpleFilter ExpressionValue="{x:Null}" FieldName="Subject" FieldType="UiPath.DataService.Core.Models.EntityField" Operator="=" ValueIndex="0" />
+                  <uda:SimpleFilter ExpressionValue="{x:Null}" FieldName="IncludedSenders" FieldType="UiPath.DataService.Core.Models.EntityField" Operator="contains" ValueIndex="1" />
                 </scg:List>
               </uda:GroupFilter.Filters>
               <uda:GroupFilter.Groups>
@@ -252,28 +253,30 @@
       </uda:QueryEntityRecords.FilterArguments>
       <uda:QueryEntityRecords.FilterValues>
         <scg:List x:TypeArguments="InArgument" Capacity="4">
-          <x:Null />
+          <InArgument x:TypeArguments="x:String">[Subject]</InArgument>
+          <InArgument x:TypeArguments="x:String">luan.hietbrink@gmail.com</InArgument>
         </scg:List>
       </uda:QueryEntityRecords.FilterValues>
     </uda:QueryEntityRecords>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="481.6,564.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-      <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="446.4,463.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <ParallelForEach x:TypeArguments="t:EmailDetails" sap2010:Annotation.AnnotationText="Loops through each record in the DS config in a parallel manner. Is used to specify email storage." DisplayName="Parallel For Each Item in QueriedRecords" sap:VirtualizedContainerService.HintSize="479,515" sap2010:WorkflowViewState.IdRef="ParallelForEach`1_4" Values="[QueriedRecords]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ActivityAction x:TypeArguments="t:EmailDetails">
+        <ActivityAction.Argument>
+          <DelegateInArgument x:TypeArguments="t:EmailDetails" Name="item" />
+        </ActivityAction.Argument>
+        <Sequence sap:VirtualizedContainerService.HintSize="416,300" sap2010:WorkflowViewState.IdRef="Sequence_5">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ParallelForEach x:TypeArguments="x:Int32" DisplayName="Parallel For Each" sap:VirtualizedContainerService.HintSize="384,376.8" sap2010:WorkflowViewState.IdRef="ParallelForEach`1_1" Values="[AllEmailRecords]">
-            <ActivityAction x:TypeArguments="x:Int32">
-              <ActivityAction.Argument>
-                <DelegateInArgument x:TypeArguments="x:Int32" Name="Record" />
-              </ActivityAction.Argument>
-              <e:NewActivity EmailDetails="{x:Null}" GetNewestEmail_1_BrowserFolder="{x:Null}" GetNewestEmail_1_BrowserFolderId="AAMkADlmYWUwNmFjLWU5YWUtNGY2My04Njg5LWNjMmU3Y2IwMzNhMAAuAAAAAABi0lQMk7JtRJ7CNcLhqRlGAQB9dCvptslzT5BaQMLAVYvgAAAAAAEIAAA=" GetNewestEmail_1_Connection0="d55a5ed4-b7ae-4beb-b24d-23192bfdab90" sap:VirtualizedContainerService.HintSize="334.4,204.8" sap2010:WorkflowViewState.IdRef="NewActivity_1" />
-            </ActivityAction>
-          </ParallelForEach>
+          <e:NewActivity sap:VirtualizedContainerService.HintSize="354,215" sap2010:WorkflowViewState.IdRef="NewActivity_2" in_MessageResult="[ReceivedEmail]" in_OrchestratorFolder="[item.TargetOrchestratorFolder]" in_QueueName="[item.TargetQueueName]" />
         </Sequence>
-      </ui:CommentOut.Body>
-    </ui:CommentOut>
+      </ActivityAction>
+    </ParallelForEach>
   </Sequence>
 </Activity>
