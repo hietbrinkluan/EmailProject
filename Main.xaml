@@ -25,7 +25,7 @@
     <x:Null />
   </VisualBasic.Settings>
   <sap2010:Annotation.AnnotationText>UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9</sap2010:Annotation.AnnotationText>
-  <sap:VirtualizedContainerService.HintSize>1208,1510</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1514,1918</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -106,6 +106,7 @@
       <x:String>UiPath.DataService.Activities</x:String>
       <x:String>Test</x:String>
       <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>System.Numerics</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -186,9 +187,10 @@
       <AssemblyReference>UiPath.DataService.Definition</AssemblyReference>
       <AssemblyReference>UiPath.DataService.Activities.Core</AssemblyReference>
       <AssemblyReference>DataService.Test</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="541,1445" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="541,1853" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Subject" />
       <Variable x:TypeArguments="x:String" Name="EmailID" />
@@ -258,7 +260,7 @@
         </scg:List>
       </uda:QueryEntityRecords.FilterValues>
     </uda:QueryEntityRecords>
-    <ParallelForEach x:TypeArguments="t:EmailDetails" sap2010:Annotation.AnnotationText="Loops through each record in the DS config in a parallel manner. Is used to specify email storage." DisplayName="Parallel For Each Item in QueriedRecords" sap:VirtualizedContainerService.HintSize="479,515" sap2010:WorkflowViewState.IdRef="ParallelForEach`1_4" Values="[QueriedRecords]">
+    <ParallelForEach x:TypeArguments="t:EmailDetails" sap2010:Annotation.AnnotationText="Loops through each record in the DS config in a parallel manner. Is used to specify email storage." DisplayName="Parallel For Each Item in QueriedRecords" sap:VirtualizedContainerService.HintSize="479,923" sap2010:WorkflowViewState.IdRef="ParallelForEach`1_4" Values="[QueriedRecords]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -268,13 +270,13 @@
         <ActivityAction.Argument>
           <DelegateInArgument x:TypeArguments="t:EmailDetails" Name="item" />
         </ActivityAction.Argument>
-        <Sequence sap:VirtualizedContainerService.HintSize="416,300" sap2010:WorkflowViewState.IdRef="Sequence_5">
+        <Sequence sap:VirtualizedContainerService.HintSize="416,708" sap2010:WorkflowViewState.IdRef="Sequence_5">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <e:NewActivity sap:VirtualizedContainerService.HintSize="354,215" sap2010:WorkflowViewState.IdRef="NewActivity_2" in_MessageResult="[ReceivedEmail]" in_OrchestratorFolder="[item.TargetOrchestratorFolder]" in_QueueName="[item.TargetQueueName]" />
+          <e:NewActivity sap:VirtualizedContainerService.HintSize="354,623" sap2010:WorkflowViewState.IdRef="NewActivity_2" In_IncludeReadEmail="[Cbool(item.IncludeReadEmail)]" in_ExcludedSenders="[item.ExcludedSenders.ToString]" in_FullMatch="[Cbool(item.FullMatch)]" in_IncludedSenders="[item.IncludedSenders.ToString]" in_MarkAsRead="[Cbool(item.MarkAsRead)]" in_MessageResult="[ReceivedEmail]" in_OrchestratorFolder="[item.TargetOrchestratorFolder.ToString]" in_QueueName="[item.TargetQueueName.ToString]" in_Subject="[item.Subject.ToString]" in_TargetInbox="[item.TargetInbox.ToString]" in_TopCount="[Cint(item.TopCount)]" />
         </Sequence>
       </ActivityAction>
     </ParallelForEach>
