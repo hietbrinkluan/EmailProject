@@ -4,15 +4,15 @@
   "description": "Blank Process",
   "main": "Main.xaml",
   "dependencies": {
-    "EmailLibraryNew": "[2.0.6]",
+    "EmailLibraryNew": "[2.0.13]",
     "UiPath.DataService.Activities": "[23.10.0]",
     "UiPath.Excel.Activities": "[2.23.2-preview]",
-    "UiPath.Mail.Activities": "[1.22.1]",
-    "UiPath.MicrosoftOffice365.Activities": "[2.5.7]",
-    "UiPath.System.Activities": "[24.2.0-preview]",
+    "UiPath.Mail.Activities": "[1.22.2]",
+    "UiPath.MicrosoftOffice365.Activities": "[2.5.9]",
+    "UiPath.System.Activities": "[24.3.0]",
     "UiPath.Testing.Activities": "[24.2.0-preview]",
     "UiPath.UIAutomation.Activities": "[24.2.0-preview]",
-    "UiPath.WebAPI.Activities": "[1.19.0-preview]"
+    "UiPath.WebAPI.Activities": "[1.20.0]"
   },
   "webServices": [],
   "entitiesStores": [
@@ -20,12 +20,12 @@
       "serviceDocument": ".entities/EntitiesStore.json",
       "tenantName": "DefaultTenant",
       "namespace": "Test",
-      "uniqueReference": "ZwrDNcbznw4BLPd+rtkxrEemlQITPinUKkW7QUvuHKY="
+      "uniqueReference": "CtZMRknL34IdfXMdimWMnJ12UiCbGZjZqMzBRWsduNI="
     }
   ],
   "schemaVersion": "4.0",
   "studioVersion": "24.2.1.0",
-  "projectVersion": "1.0.20",
+  "projectVersion": "2.0.4",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
