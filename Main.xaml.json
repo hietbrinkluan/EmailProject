@@ -64,6 +64,18 @@
       "IsPrincipal": true,
       "ArgumentType": 0,
       "DataSourceItems": null
+    },
+    {
+      "Name": "MarkAsReadUnreadConnections_1_Connection0",
+      "DisplayName": "MarkAsReadUnreadConnections_1_Connection",
+      "Category": null,
+      "Tooltip": "Mark Email as Read or Unread",
+      "Placeholder": null,
+      "Widget": "Connection",
+      "IsRequired": true,
+      "IsPrincipal": true,
+      "ArgumentType": 1,
+      "DataSourceItems": null
     }
   ]
 }
